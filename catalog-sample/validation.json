@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "validatedAtUtc": "2026-09-08T19:44:13Z",
+  "status": "PASS",
+  "validator": "executed local Python csv assertions; read-only, deterministic",
+  "assertions": {
+    "sourceRows": 7,
+    "mappingRows": 7,
+    "resolvedRows": 6,
+    "exceptionRows": 1,
+    "correctedRows": 7,
+    "variableParentRows": 1,
+    "variationRows": 5,
+    "simpleRows": 1,
+    "allVariationsReferenceH300": true,
+    "caseConversion": "2 cases x 6 = 12 eaches",
+    "ambiguousRowExcludedFromCorrectedOutput": true
+  },
+  "sha256": {
+    "README.md": "8631aa2d6956a0bfe771f5898ad9ae39d886ba1bc4c975682d66d0e753e7a2e1",
+    "exceptions.csv": "faa7614aa1ede60f26ac0e18672ef9bee2592b7e3afbaad6404258de37c71250",
+    "source-to-output-mapping.csv": "536c026aebf3de1cab3582a8972553eb4392fb8c9d057df9dc2547f57b43c4ef",
+    "supplier-input.csv": "f5554837af74ac92f5e4c7a5415501594471b40cdc798ea2a46e34ca18f5df05",
+    "woocommerce-corrected.csv": "bf0c29427230c47bf46c0b9d26b1a4a993549d295dcc71cb062ada07210599e9"
+  },
+  "scopeLimit": "Structural sample validation only; no live WooCommerce import was performed and no arbitrary-file generalization is claimed."
+}
