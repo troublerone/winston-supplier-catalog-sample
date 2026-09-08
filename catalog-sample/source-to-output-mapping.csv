@@ -1,0 +1,8 @@
+supplier_row,supplier_sku,output_sku,parent_sku,decision,normalized_size,normalized_color,source_inventory,source_uom,case_size,output_each_stock,reason
+1,H300-RED-S,H300-RED-S,H300,RESOLVED,Small,Red,12,EA,1,12,"Stable H300 model token; trim/case normalization; EA means each"
+2,H300-RED-M,H300-RED-M,H300,RESOLVED,Medium,Red,9,each,1,9,"Stable H300 model token; M expanded to Medium"
+3,H300-RED-L,H300-RED-L,H300,RESOLVED,Large,Red,4,Each,1,4,"Stable H300 model token; L expanded to Large"
+4,H300-BLU-L,H300-BLU-L,H300,RESOLVED,Large,Blue,5,ea,1,5,"Stable H300 model token; Large retained; ea means each"
+5,H300-BLU-XL,H300-BLU-XL,H300,RESOLVED,Extra Large,Blue,3,each,1,3,"Stable H300 model token; XL expanded to Extra Large"
+6,H400-NVY-OS-CASE,H400-NVY-OS,,RESOLVED,One Size,Navy,2,case,6,12,"Stable H400 model token; two cases times six each"
+7,ROAD-UNKNOWN-XL,,,EXCEPTION,Extra Large,Navy,3,case,,,"No stable model/parent token and missing case size; grouping and each stock cannot be inferred truthfully"
