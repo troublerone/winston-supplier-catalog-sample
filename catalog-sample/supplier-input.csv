@@ -1,0 +1,8 @@
+supplier_row,supplier_sku,supplier_product_name,size_label,color_label,inventory_count,inventory_uom,case_size,sell_price_each_usd
+1,H300-RED-S,Aero 300 Road Helmet, small ,red,12,EA,1,59.00
+2,H300-RED-M,Aero 300 Road Helmet,M,RED,9,each,1,59.00
+3,H300-RED-L,Aero 300 Road Helmet,L,Red,4,Each,1,59.00
+4,H300-BLU-L,Aero 300 Road Helmet,Large,Blue,5,ea,1,59.00
+5,H300-BLU-XL,Aero 300 Road Helmet,XL,Blue,3,each,1,64.00
+6,H400-NVY-OS-CASE,Trail Helmet 400,One Size,Navy,2,case,6,35.00
+7,ROAD-UNKNOWN-XL,Aero Road Helmet,XL,Navy,3,case,,64.00
