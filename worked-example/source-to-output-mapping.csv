@@ -1,0 +1,8 @@
+supplier_row,supplier_sku,output_sku,parent_sku,decision,normalized_size,normalized_color,source_inventory,source_uom,case_size,output_each_stock,reason
+1,H300-RED-S,H300-RED-S,H300,RESOLVED,Small,Red,12,EA,1,12,"Declared parent, variant, unit, and SKU rules applied"
+2,H300-RED-M,H300-RED-M,H300,RESOLVED,Medium,Red,9,each,1,9,"Declared parent, variant, unit, and SKU rules applied"
+3,H300-RED-L,H300-RED-L,H300,RESOLVED,Large,Red,4,Each,1,4,"Declared parent, variant, unit, and SKU rules applied"
+4,H300-BLU-L,H300-BLU-L,H300,RESOLVED,Large,Blue,5,ea,1,5,"Declared parent, variant, unit, and SKU rules applied"
+5,H300-BLU-XL,H300-BLU-XL,H300,RESOLVED,Extra Large,Blue,3,each,1,3,"Declared parent, variant, unit, and SKU rules applied"
+6,H400-NVY-OS-CASE,H400-NVY-OS,H400,RESOLVED,One Size,Navy,2,case,6,12,"Declared parent, variant, unit, and SKU rules applied"
+7,ROAD-UNKNOWN-XL,,,EXCEPTION,Extra Large,Navy,3,case,,,PARENT_KEY_AMBIGUOUS; CASE_SIZE_IS_MISSING

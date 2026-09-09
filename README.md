@@ -1,55 +1,68 @@
-# Winston supplier-catalog offer test
+# Supplier CSV to WooCommerce: worked example — USD 9 minimum
 
-One narrow, fixed-scope workflow sample is published here to test whether the
-demonstrated result is useful to real buyers. All included inputs are synthetic.
-This is not evidence of customers, savings, or professional expertise.
+For ecommerce implementers preparing one documented supplier CSV, this example
+shows the input, explicit mapping, draft import, row audit, and refused row.
+The input is synthetic. It establishes neither customer demand nor a successful
+live-store import. Inspect these files without paying for a run.
 
-Do not put confidential, proprietary, personal, export-controlled, or customer
-data in GitHub issues. Opening an issue records interest only; it is not a
-purchase or service agreement.
+## Inspect the complete example
 
-## Supplier CSV to WooCommerce variations — USD 9
+- [Supplier input](worked-example/supplier-input.csv): seven data rows.
+- [Declared mapping](worked-example/mapping.json): parent token, column names,
+  case suffix, size/color synonyms, and inventory units.
+- [WooCommerce draft](worked-example/woocommerce-corrected.csv): seven output
+  rows, including a generated parent, five variations, and a simple product.
+- [Source map](worked-example/source-to-output-mapping.csv): decisions for all
+  seven source rows, including the refusal.
+- [Exceptions](worked-example/exceptions.csv): one row requiring correction.
+- [Manifest](worked-example/manifest.json): counts, hashes, and provenance.
 
-For a small merchant or ecommerce implementer with one documented supplier
-schema, the result is a draft WooCommerce parent/variation CSV, a
-source-to-output map, and an exception file. Ambiguous parent identity, units,
-or case size are held back instead of guessed.
+Rows 1–5 share the declared H300 parent. Size and color labels are normalized.
+Row 6 removes the declared -CASE suffix and converts two six-unit cases into
+12 eaches. Row 7 has an ambiguous parent key and missing case size; it is excluded
+with PARENT_KEY_AMBIGUOUS and CASE_SIZE_IS_MISSING. The tool does not guess.
+The draft uses Published=-1; review it before a controlled import.
 
-Limits: one CSV, at most 10,000 data rows and 10 MiB, one declared mapping
-profile; no store access, live import, OCR, enrichment, image download, currency
-conversion, forecasting, or recurring synchronization.
+These files were reproduced locally from the acceptance input and mapping. All
+three output SHA-256 hashes match the recorded private unmonetized Apify run
+IN2YgSVfSdMGdT9Vc, build eibI26ZTs322kUuSy (2026-09-09). That run resolved six
+source rows and refused one. Its charge state was NOT_APPLICABLE. The cloud run
+could not be retrieved in this documentation session (HTTP 403). The manifest
+here is a local provenance record, not a retrieved cloud billing receipt.
+Public paid charging acceptance remains UNKNOWN.
 
-The synthetic sample under `catalog-sample/` resolves six rows, converts two
-six-unit cases to 12 eaches, and refuses one ambiguous row. It demonstrates the
-file format and refusal behavior only; it does not prove arbitrary supplier
-coverage or a live WooCommerce import.
+## Run route and effective price
 
-Closest alternatives: WooCommerce's native importer and WP All Import are
-stronger for users who can configure mappings or need recurring automation.
-The distinction tested here is a no-store-access corrected file with an explicit
-audit map and refusal ledger—not price alone.
+[Open the Actor and its run form](https://apify.com/winstonvale/supplier-csv-to-woocommerce-variations).
+Sign in to Apify to configure a run. Upload your CSV using the supplierCsv file
+input and supply the explicit mapping shown above; maxRows may be at most 10000.
+For this synthetic example, the complete [Actor input](worked-example/actor-input.json)
+uses the existing public acceptance upload URL. That URL may expire; upload
+supplier-input.csv yourself if unavailable. Do not place customer data in GitHub.
+Review the current price and maximum-charge setting before starting.
 
-## Paid route
+Public Actor metadata checked 2026-09-09 reports a USD 9 minimum total-charge
+limit: USD 0.005 per Actor-start event plus USD 8.995 for one completed bundle.
+The platform defines start events by allocated GB, minimum one event. Thus USD 9
+is the complete-bundle price with one start event; larger memory allocations can
+increase it. A fatal validation failure can still incur the start event. An
+exception-bearing completed bundle is chargeable. Local product documentation
+states there is no dataset-item charge and platform usage is included.
+This documentation session started no Actor and incurred no Actor charges.
 
-The public Apify Actor is:
+After a completed run, download the three named CSVs from default storage and
+inspect OUTPUT and the dataset manifest. Compare hashes, resolve exceptions,
+then review the draft in your controlled WooCommerce import workflow. The Actor
+does not access or modify your store. If chargeState is ambiguous, or a confirmed
+charge is followed by an incomplete OUTPUT, reconcile platform charge records
+before retrying. A missing summary is not permission to pay again.
 
-https://apify.com/winstonvale/supplier-csv-to-woocommerce-variations
+## Limits
 
-Its current Store price is USD 0.005 per start plus USD 8.995 only after the
-corrected CSV, source map, and exceptions CSV are stored and read back, with a
-USD 9.00 minimum run limit. There is no dataset-item charge and platform usage
-is included. The Actor package passed deterministic local acceptance and a
-successful Apify cloud build; no external customer run or revenue has yet been
-observed. A paid external run is a purchase. Owner, platform, or synthetic runs
-are not customer revenue.
-
-## How to record qualified interest
-
-Comment on issue #1 with only:
-
-- whether USD 9 for the displayed bundle is acceptable; and
-- whether you would prefer it over WooCommerce native import or WP All Import,
-  and why.
-
-Do not attach or link real documents in GitHub. Missing traffic or zero views is
-not classified as rejection.
+One UTF-8 comma-delimited CSV, one declared mapping, at most 10 MiB and 10,000 data
+rows. Missing parents/case sizes, duplicate identities, unsupported units, and
+unsafe spreadsheet formulas are held back as explicit exceptions; fatal schema
+or unsafe-regex errors refuse conversion. No live import, store repair, OCR,
+enrichment, image download, currency conversion, or recurring synchronization.
+Stored file URLs are data-bearing links, not a confidentiality guarantee;
+download promptly and check your storage access and retention settings.

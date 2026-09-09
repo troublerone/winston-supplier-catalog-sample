@@ -1,0 +1,2 @@
+supplier_row,supplier_sku,issue_codes,blocked_fields,required_resolution
+7,ROAD-UNKNOWN-XL,PARENT_KEY_AMBIGUOUS|CASE_SIZE_IS_MISSING,parent_sku|output_sku|output_each_stock,Correct the declared source fields; this row is excluded rather than guessed

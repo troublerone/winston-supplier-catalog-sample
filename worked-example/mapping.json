@@ -1,0 +1,34 @@
+{
+  "supplierSkuColumn": "supplier_sku",
+  "productNameColumn": "supplier_product_name",
+  "parentTokenRegex": "^([A-Z][0-9]{3})-",
+  "caseSkuSuffixRegex": "-CASE$",
+  "sizeColumn": "size_label",
+  "colorColumn": "color_label",
+  "inventoryCountColumn": "inventory_count",
+  "inventoryUomColumn": "inventory_uom",
+  "caseSizeColumn": "case_size",
+  "retailPriceColumn": "sell_price_each_usd",
+  "sizeSynonyms": {
+    "small": "Small",
+    "S": "Small",
+    "M": "Medium",
+    "L": "Large",
+    "Large": "Large",
+    "XL": "Extra Large",
+    "One Size": "One Size"
+  },
+  "colorSynonyms": {
+    "red": "Red",
+    "blue": "Blue",
+    "navy": "Navy"
+  },
+  "eachSynonyms": [
+    "EA",
+    "each"
+  ],
+  "caseSynonyms": [
+    "case",
+    "cases"
+  ]
+}
